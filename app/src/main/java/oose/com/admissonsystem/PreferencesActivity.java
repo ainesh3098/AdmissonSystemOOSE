@@ -52,12 +52,12 @@ public class PreferencesActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
 
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        /*databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 String str = dataSnapshot.child("Candidate").child(firebaseUser.getUid()).child("Choices").child("Choice1").getValue(String.class);
-                if (str.length() == 0) {
+                if (str.isEmpty()) {
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(PreferencesActivity.this);
                     builder.setTitle("Error");
@@ -81,7 +81,7 @@ public class PreferencesActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
+        });*/
 
         savePreferencesFAB.setOnClickListener(new View.OnClickListener() {
             @Override

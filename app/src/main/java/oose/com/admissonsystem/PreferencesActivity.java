@@ -56,7 +56,8 @@ public class PreferencesActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if (dataSnapshot.child("Candidate").child(firebaseUser.getUid()).child("Choices") != null) {
+                String str = dataSnapshot.child("Candidate").child(firebaseUser.getUid()).child("Choices").child("Choice1").getValue(String.class);
+                if (str.length() == 0) {
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(PreferencesActivity.this);
                     builder.setTitle("Error");

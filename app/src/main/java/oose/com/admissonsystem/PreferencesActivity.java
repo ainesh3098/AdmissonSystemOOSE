@@ -1,15 +1,28 @@
 package oose.com.admissonsystem;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class PreferencesActivity extends AppCompatActivity {
 
     TextView sub1 , sub2 , sub3 , sub4 , sub5;
     TextView preference1, preference2 , preference3;
+
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+
+    FloatingActionButton savePreferencesFAB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +38,49 @@ public class PreferencesActivity extends AppCompatActivity {
         preference2 = findViewById(R.id.preference2);
         preference3 = findViewById(R.id.preference3);
 
+        savePreferencesFAB = findViewById(R.id.savePreferencesFAB);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
+
+        savePreferencesFAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (preference1.getText().toString().length() != 0) {
+
+                    databaseReference.child("Candidate").child(firebaseUser.getUid()).child("Choices").child("Choice1").setValue(preference1.getText().toString());
+
+                }
+                else {
+                    databaseReference.child("Candidate").child(firebaseUser.getUid()).child("Choices").child("Choice1").setValue("None");
+
+                }
+
+                if (preference2.getText().toString().length() != 0) {
+
+                    databaseReference.child("Candidate").child(firebaseUser.getUid()).child("Choices").child("Choice2").setValue(preference2.getText().toString());
+
+                }
+                else {
+                    databaseReference.child("Candidate").child(firebaseUser.getUid()).child("Choices").child("Choice2").setValue("None");
+
+                }
+
+                if (preference1.getText().toString().length() != 0) {
+
+                    databaseReference.child("Candidate").child(firebaseUser.getUid()).child("Choices").child("Choice3").setValue(preference3.getText().toString());
+
+                }
+                else {
+                    databaseReference.child("Candidate").child(firebaseUser.getUid()).child("Choices").child("Choice3").setValue("None");
+
+                }
+
+            }
+        });
 
         preference1.setOnClickListener(new View.OnClickListener() {
             @Override

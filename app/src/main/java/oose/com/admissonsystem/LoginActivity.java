@@ -30,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
 
     String sEmailLogin, sPasswordLogin;
 
+    TextView register;
+
     FirebaseAuth firebaseAuth;
 
     FirebaseUser firebaseUser;
@@ -57,6 +59,8 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.emailLogin);
         password = findViewById(R.id.passwordLogin);
         loginBtn = findViewById(R.id.btnSignIn);
+
+        register = findViewById(R.id.registerTextView);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
@@ -113,6 +117,13 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this , SignUpActivity.class));
+                finish();
+            }
+        });
 
 
     }

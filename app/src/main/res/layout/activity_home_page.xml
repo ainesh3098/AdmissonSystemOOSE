@@ -16,9 +16,33 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/productsansbold"
+                    android:textColor="#616161"
+                    android:textSize="17dp"
+                    android:text="Welcome "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/productsansbold"
+                    android:textSize="20dp"
+                    android:textColor="#212121"
+                    android:text="Name"/>
+
+            </LinearLayout>
+
 
             <android.support.v7.widget.CardView
-                android:id="@+id/PreferencesCardView"
+                android:id="@+id/preferencesCardView"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
@@ -60,7 +84,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/feePayment"
+                android:id="@+id/feePaymentCard"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"

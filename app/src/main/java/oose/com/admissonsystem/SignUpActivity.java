@@ -62,7 +62,6 @@ public class SignUpActivity extends AppCompatActivity {
         register = findViewById(R.id.RegisterCard);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        firebaseUser = firebaseAuth.getCurrentUser();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
         databaseReference = firebaseDatabase.getReference();
@@ -95,6 +94,8 @@ public class SignUpActivity extends AppCompatActivity {
 
                               if(task.isSuccessful())
                               {
+                                  firebaseUser = firebaseAuth.getCurrentUser();
+
                                   databaseReference.child("Candidate").child(firebaseUser.getUid()).child("rollNumber").setValue(sRoll);
                                   databaseReference.child("Candidate").child(firebaseUser.getUid()).child("name").setValue(sName);
                                   databaseReference.child("Candidate").child(firebaseUser.getUid()).child("email").setValue(sEmail);

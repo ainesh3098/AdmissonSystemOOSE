@@ -63,6 +63,12 @@ public class LoginActivity extends AppCompatActivity {
 
         databaseReference = firebaseDatabase.getReference();
 
+        if (firebaseUser != null) {
+
+            startActivity(new Intent(LoginActivity.this, HomePageActivity.class));
+            finish();
+        }
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

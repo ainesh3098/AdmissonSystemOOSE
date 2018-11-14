@@ -74,13 +74,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final ProgressDialog progressDialog = ProgressDialog.show(LoginActivity.this, "Loading", "Please Wait..", true);
-
                 sEmailLogin = email.getText().toString();
                 sPasswordLogin = password.getText().toString();
 
                 if(!sEmailLogin.isEmpty() || !sPasswordLogin.isEmpty())
                 {
+                    final ProgressDialog progressDialog = ProgressDialog.show(LoginActivity.this, "Loading", "Please Wait..", true);
+
                     firebaseAuth.signInWithEmailAndPassword(sEmailLogin, sPasswordLogin).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {

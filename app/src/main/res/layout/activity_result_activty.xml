@@ -64,17 +64,19 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3">
 
             <TextView
+                android:id="@+id/courseAllotted"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/productsansmedium"
                 android:gravity="center"
-                android:text="Course alotted"
+                android:text="Course allotted"
                 android:textColor="#616161"
                 android:textSize="21dp"
                 tools:layout_editor_absoluteX="62dp"
                 tools:layout_editor_absoluteY="48dp" />
 
             <TextView
+                android:id="@+id/courseName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/productsansbold"

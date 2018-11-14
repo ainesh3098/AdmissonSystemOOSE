@@ -1,6 +1,10 @@
 package oose.com.admissonsystem;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,8 +13,11 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class PreferencesActivity extends AppCompatActivity {
 
@@ -44,6 +51,36 @@ public class PreferencesActivity extends AppCompatActivity {
         firebaseUser = firebaseAuth.getCurrentUser();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if (dataSnapshot.child("Candidate").child(firebaseUser.getUid()).child("Choices") != null) {
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(PreferencesActivity.this);
+                    builder.setTitle("Error");
+                    builder.setMessage("You have already selected your preferences.");
+                    builder.setCancelable(false);
+                    builder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            startActivity(new Intent(PreferencesActivity.this, ResultActivty.class));
+                            finish();
+
+                        }
+                    });
+                    builder.show();
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         savePreferencesFAB.setOnClickListener(new View.OnClickListener() {
             @Override

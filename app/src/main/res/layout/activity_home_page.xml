@@ -18,7 +18,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginStart="16dp"
                 android:layout_height="wrap_content">
 
@@ -26,19 +26,48 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/productsansbold"
-                    android:textColor="#616161"
-                    android:textSize="17dp"
-                    android:text="Welcome "/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/productsansbold"
-                    android:textSize="20dp"
-                    android:textColor="#212121"
+                    android:textSize="24dp"
+                    android:textColor="#1565C0"
                     android:text="Name"/>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansmedium"
+                android:textSize="14dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="16dp"
+                android:text="Roll Number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansbold"
+                android:textSize="20dp"
+                android:textColor="#212121"
+                android:layout_marginStart="16dp"
+                android:text="Roll Number"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansmedium"
+                android:textSize="14dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:text="Rank"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/productsansbold"
+                android:textSize="20dp"
+                android:textColor="#212121"
+                android:layout_marginStart="16dp"
+                android:text="Rank"/>
 
 
             <android.support.v7.widget.CardView
@@ -46,8 +75,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                app:cardBackgroundColor="#f5f5f5"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="#eeeeee"
                 app:cardElevation="0dp"
                 app:cardCornerRadius="10dp"
                 android:layout_marginEnd="16dp"
@@ -55,10 +84,49 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Preferences"/>
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/girl"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:background="#e0e0e0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/productsansbold"
+                        android:text="Preferences"
+                        android:textColor="#424242"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/view"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
 
             </android.support.v7.widget.CardView>
 
@@ -68,7 +136,7 @@
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                app:cardBackgroundColor="#f5f5f5"
+                app:cardBackgroundColor="#eeeeee"
                 app:cardElevation="0dp"
                 app:cardCornerRadius="10dp"
                 android:layout_marginEnd="16dp"
@@ -76,10 +144,50 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Result"/>
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/girl"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:background="#e0e0e0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/productsansbold"
+                        android:text="Results"
+                        android:textColor="#424242"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
 
             </android.support.v7.widget.CardView>
 
@@ -89,7 +197,7 @@
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                app:cardBackgroundColor="#f5f5f5"
+                app:cardBackgroundColor="#eeeeee"
                 app:cardElevation="0dp"
                 app:cardCornerRadius="10dp"
                 android:layout_marginEnd="16dp"
@@ -97,20 +205,59 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fee Payment"/>
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/girl"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:background="#e0e0e0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/productsansbold"
+                        android:text="Fee Payment"
+                        android:textColor="#424242"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/view4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
 
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 android:id="@+id/logoutCard"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                app:cardBackgroundColor="#f5f5f5"
+                android:layout_marginTop="36dp"
+                app:cardBackgroundColor="#B71C1C"
                 app:cardElevation="0dp"
                 app:cardCornerRadius="10dp"
                 android:layout_marginEnd="16dp"
@@ -121,7 +268,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Logout"/>
+                    android:text="Logout"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/productsansbold"/>
 
             </android.support.v7.widget.CardView>
             

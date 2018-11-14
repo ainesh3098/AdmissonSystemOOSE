@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "120688447140",
+    "firebase_url": "https://admissonsystem.firebaseio.com",
+    "project_id": "admissonsystem",
+    "storage_bucket": "admissonsystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120688447140:android:0398601b530735fd",
+        "android_client_info": {
+          "package_name": "oose.com.admissonsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120688447140-u4vm7gs8s9dmb512f8bbv2fcq06ap3mu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "oose.com.admissonsystem",
+            "certificate_hash": "f2c03c3217f2e948c044b99614e37778ec9d69e1"
+          }
+        },
+        {
+          "client_id": "120688447140-5fobbcd9po33sah85f950t64c2afkr8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL_sJZtN4vdvGlXn3nqo-kO88pf7WJAMk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120688447140-5fobbcd9po33sah85f950t64c2afkr8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

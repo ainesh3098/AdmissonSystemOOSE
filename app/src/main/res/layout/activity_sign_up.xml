@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:src="@drawable/skyliney"
-        app:layout_constraintBottom_toTopOf="@+id/invitePGCardView"
+        app:layout_constraintBottom_toTopOf="@+id/RegisterCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
@@ -59,7 +59,7 @@
             tools:layout_editor_absoluteY="226dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/tenantNameEditText"
+                android:id="@+id/candidateNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@drawable/transparent_bg"
@@ -82,12 +82,12 @@
             tools:layout_editor_absoluteY="140dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/tenantContactEditText"
+                android:id="@+id/candidateEmailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@drawable/transparent_bg"
                 android:fontFamily="@font/productsans"
-                android:hint="Candidate Contact"
+                android:hint="Candidate Email"
                 android:inputType="number"
                 android:maxLength="10"
                 android:paddingStart="8dp"
@@ -99,28 +99,65 @@
         </android.support.design.widget.TextInputLayout>
 
 
-        <android.support.design.widget.TextInputLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:clipChildren="false">
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/pgNameEditText"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/transparent_bg"
-                android:fontFamily="@font/productsans"
-                android:hint="Roll Number"
-                android:inputType="number"
-                android:maxLength="6"
-                android:paddingStart="8dp"
-                android:textColor="#212121"
-                android:textColorHint="#616161"
-                android:textSize="17dp"
-                android:translationY="2dp" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="24dp"
+                android:clipChildren="false">
 
-        </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/candidateRoll"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/transparent_bg"
+                    android:fontFamily="@font/productsans"
+                    android:hint="Roll Number"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingStart="8dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#616161"
+                    android:textSize="17dp"
+                    android:translationY="2dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:clipChildren="false">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/candidateRank"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/transparent_bg"
+                    android:fontFamily="@font/productsans"
+                    android:hint="JEE Rank"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingStart="8dp"
+                    android:textColor="#212121"
+                    android:textColorHint="#616161"
+                    android:textSize="17dp"
+                    android:translationY="2dp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+
 
 
         <android.support.design.widget.TextInputLayout
@@ -130,7 +167,7 @@
             android:clipChildren="false">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/pgOwnerNameEditText"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@drawable/transparent_bg"
@@ -156,10 +193,10 @@
                 android:layout_marginTop="24dp"
                 android:layout_weight="1"
                 android:clipChildren="false"
-                app:layout_constraintBottom_toTopOf="@+id/invitePGCardView">
+                app:layout_constraintBottom_toTopOf="@+id/RegisterCard">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/pgContactEditText"
+                    android:id="@+id/passwordConfirm"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:background="@drawable/transparent_bg"
@@ -182,7 +219,7 @@
     </LinearLayout>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/invitePGCardView"
+        android:id="@+id/RegisterCard"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:cardBackgroundColor="#2d577b"

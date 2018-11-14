@@ -24,7 +24,7 @@
 
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/rollNumberEditText"
+            android:id="@+id/emailLogin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
@@ -41,7 +41,7 @@
             android:textSize="18dp"
             android:textColor="#FFFFFF"
             android:fontFamily="@font/productsans"
-            android:hint="JEE Roll Number"
+            android:hint="Email"
             android:inputType="textPersonName"
             tools:ignore="RtlHardcoded" />
 
@@ -66,7 +66,7 @@
 
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/passwordtextView"
+            android:id="@+id/passwordLogin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/usernametextView"

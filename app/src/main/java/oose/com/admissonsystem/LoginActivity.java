@@ -4,16 +4,38 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginActivity extends AppCompatActivity {
 
+    EditText email, password;
+    FloatingActionButton loginBtn;
 
-    TextView register;
+    String sEmailLogin, sPasswordLogin;
+
+    FirebaseAuth firebaseAuth;
+
+    FirebaseUser firebaseUser;
+
+    FirebaseDatabase firebaseDatabase;
+
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +53,56 @@ public class LoginActivity extends AppCompatActivity {
             window.setStatusBarColor(Color.rgb(35, 48, 64));
         }
 
+        email = findViewById(R.id.emailLogin);
+        password = findViewById(R.id.passwordLogin);
+        loginBtn = findViewById(R.id.btnSignIn);
 
-        register = findViewById(R.id.registerTextView);
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+        firebaseDatabase = FirebaseDatabase.getInstance();
 
-        register.setOnClickListener(new View.OnClickListener() {
+        databaseReference = firebaseDatabase.getReference();
+
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+
+                sEmailLogin = email.getText().toString();
+                sPasswordLogin = password.getText().toString();
+
+                if(!sEmailLogin.isEmpty() || !sPasswordLogin.isEmpty())
+                {
+                    firebaseAuth.signInWithEmailAndPassword(sEmailLogin, sPasswordLogin).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            if(task.isSuccessful())
+                            {
+                                startActivity(new Intent(LoginActivity.this , HomePageActivity.class));
+                                finish();
+                            }
+                            else
+                            {
+                                Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
+
+                else
+                {
+                    if(sEmailLogin.isEmpty()){
+                        email.setError("Required");
+                    }
+                    if(sPasswordLogin.isEmpty()){
+                        password.setError("Required");
+                    }
+                }
             }
         });
+
+
+
 
     }
 }

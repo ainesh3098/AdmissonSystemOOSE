@@ -1,5 +1,6 @@
 package oose.com.admissonsystem;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -73,6 +74,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                final ProgressDialog progressDialog = ProgressDialog.show(LoginActivity.this, "Loading", "Please Wait..", true);
+
                 sEmailLogin = email.getText().toString();
                 sPasswordLogin = password.getText().toString();
 
@@ -84,6 +87,8 @@ public class LoginActivity extends AppCompatActivity {
 
                             if(task.isSuccessful())
                             {
+                                progressDialog.dismiss();
+
                                 startActivity(new Intent(LoginActivity.this , HomePageActivity.class));
                                 finish();
                             }

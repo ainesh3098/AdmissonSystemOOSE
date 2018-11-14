@@ -1,5 +1,6 @@
 package oose.com.admissonsystem;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -66,13 +67,8 @@ public class SignUpActivity extends AppCompatActivity {
 
         databaseReference = firebaseDatabase.getReference();
 
-      /*  if(firebaseUser != null)
-        {
-            start
-        }*/
 
-
-      register.setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
 
@@ -91,6 +87,8 @@ public class SignUpActivity extends AppCompatActivity {
                   }
                   else
                   {
+                      final ProgressDialog progressDialog = ProgressDialog.show(SignUpActivity.this, "Loading", "Please wait..", true);
+
                       firebaseAuth.createUserWithEmailAndPassword(sEmail,sPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                           @Override
                           public void onComplete(@NonNull Task<AuthResult> task) {
@@ -104,6 +102,7 @@ public class SignUpActivity extends AppCompatActivity {
                                       @Override
                                       public void onComplete(@NonNull Task<Void> task) {
 
+                                          progressDialog.dismiss();
                                           startActivity( new Intent(SignUpActivity.this , HomePageActivity.class));
                                           finish();
                                       }

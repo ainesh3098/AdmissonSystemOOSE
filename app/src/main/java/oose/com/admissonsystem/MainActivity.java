@@ -6,17 +6,23 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
-
     private boolean isFirstStart;
+
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       Thread t = new Thread(new Runnable() {
+        Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
                 //  Intro App Initialize SharedPreferences
@@ -39,7 +45,13 @@ public class MainActivity extends AppCompatActivity {
         });
         t.start();
 
-       if(!isFirstStart)
+        if (firebaseUser != null) {
+
+            startActivity(new Intent(MainActivity.this, HomePageActivity.class));
+            finish();
+        }
+
+        if(!isFirstStart)
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
 
 

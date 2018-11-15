@@ -22,6 +22,7 @@ public class SeatMaintenanceActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     long counter = 0;
+
     long remaining = 0;
 
     @Override

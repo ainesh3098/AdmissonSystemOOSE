@@ -1,5 +1,6 @@
 package oose.com.admissonsystem;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +28,12 @@ public class ResultActivty extends AppCompatActivity {
     long count;
 
     String course;
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(ResultActivty.this, HomePageActivity.class));
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

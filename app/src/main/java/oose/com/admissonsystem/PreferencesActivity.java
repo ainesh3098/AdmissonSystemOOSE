@@ -28,8 +28,15 @@ public class PreferencesActivity extends AppCompatActivity {
     FirebaseUser firebaseUser;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    DatabaseReference databaseReference2;
 
     FloatingActionButton savePreferencesFAB;
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(PreferencesActivity.this, HomePageActivity.class));
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +126,27 @@ public class PreferencesActivity extends AppCompatActivity {
 
             }
         });
+
+        databaseReference2 = databaseReference.child("Candidate").child(firebaseUser.getUid()).child("Choices");
+        databaseReference2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String choice1 = dataSnapshot.child("Choice1").getValue(String.class);
+                String choice2 = dataSnapshot.child("Choice2").getValue(String.class);
+                String choice3 = dataSnapshot.child("Choice3").getValue(String.class);
+
+                preference1.setText(choice1);
+                preference2.setText(choice2);
+                preference3.setText(choice3);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(PreferencesActivity.this, "Failed to update!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         preference1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -407,4 +435,5 @@ public class PreferencesActivity extends AppCompatActivity {
 
 
     }
+
 }

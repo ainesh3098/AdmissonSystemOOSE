@@ -74,7 +74,7 @@
 
 
             <android.support.v7.widget.CardView
-                android:id="@+id/preferencesCardView"
+                android:id="@+id/personalDetailsCardView"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
@@ -92,25 +92,25 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/imageView1"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:src="@drawable/girl"
+                        android:src="@drawable/user"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <View
-                        android:id="@+id/view"
+                        android:id="@+id/view1"
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
                         android:layout_marginStart="20dp"
                         android:background="#e0e0e0"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintStart_toEndOf="@+id/imageView1"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -121,17 +121,77 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
                         android:fontFamily="@font/productsansbold"
-                        android:text="Preferences"
+                        android:text="Personal Details"
                         android:textColor="#424242"
                         android:textSize="18dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/view"
+                        app:layout_constraintStart_toEndOf="@+id/view1"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 </android.support.constraint.ConstraintLayout>
 
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+            android:id="@+id/preferencesCardView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#eeeeee"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/girl"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:background="#e0e0e0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/productsansbold"
+                    android:text="Preferences"
+                    android:textColor="#424242"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 android:id="@+id/resultCardView"
@@ -158,7 +218,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:src="@drawable/girl"
+                        android:src="@drawable/result"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -181,7 +241,7 @@
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
                         android:fontFamily="@font/productsansbold"
-                        android:text="Results"
+                        android:text="Result"
                         android:textColor="#424242"
                         android:textSize="18dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -219,7 +279,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:src="@drawable/girl"
+                        android:src="@drawable/payment"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -260,6 +320,7 @@
                 android:layout_height="70dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="36dp"
+                android:layout_marginBottom="8dp"
                 app:cardBackgroundColor="#B71C1C"
                 app:cardElevation="0dp"
                 app:cardCornerRadius="10dp"

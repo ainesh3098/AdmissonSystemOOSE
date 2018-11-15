@@ -25,7 +25,8 @@
         <activity android:name=".HomePageActivity" />
         <activity android:name=".PreferencesActivity" />
         <activity android:name=".ResultActivty" />
-        <activity android:name=".SeatMaintenanceActivity"></activity>
+        <activity android:name=".SeatMaintenanceActivity" />
+        <activity android:name=".StudentDetailsActivity"></activity>
     </application>
 
 </manifest>

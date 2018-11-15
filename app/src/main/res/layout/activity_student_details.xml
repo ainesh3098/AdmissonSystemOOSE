@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="MissingConstraints"
+    tools:layout_editor_absoluteX="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/pgNameTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:clipChildren="false"
+            android:hint="PG Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/pgNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/transparent_bg"
+                android:enabled="false"
+                android:fontFamily="@font/productsans"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:maxLength="25"
+                android:text=""
+                android:textColor="#424242"
+                android:textSize="16dp"
+                android:translationY="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.206"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/registrationNumberTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:clipChildren="false"
+            android:fontFamily="@font/productsans"
+            android:hint="Max Occupancy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTIL">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/registrationNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:enabled="false"
+                android:fontFamily="@font/productsans"
+                android:hint="Registration Number"
+                android:inputType="text"
+                android:text=""
+                android:textColor="#424242"
+                android:textSize="16dp"
+                android:translationY="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="242dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/addressTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:clipChildren="false"
+            android:hint="Nearest Landmak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/afterPersonalView">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/addressEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/transparent_bg"
+                android:fontFamily="@font/productsans"
+                android:hint="Address"
+                android:inputType="textMultiLine"
+                android:maxLength="80"
+                android:text=""
+                android:textColor="#424242"
+                android:textSize="16dp"
+                android:translationY="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.964"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/guardianTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:clipChildren="false"
+            android:hint="Nearest Landmak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressTIL">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/guardianEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/transparent_bg"
+                android:fontFamily="@font/productsans"
+                android:hint="Guardian Name"
+                android:inputType="text"
+                android:maxLength="80"
+                android:text=""
+                android:textColor="#424242"
+                android:textSize="16dp"
+                android:translationY="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.964"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/guardianMobileTIL"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:clipChildren="false"
+            android:hint="Nearest Landmak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardianTIL">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/guardianMobileEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/transparent_bg"
+                android:fontFamily="@font/productsans"
+                android:hint="Guardian Mobile"
+                android:inputType="number"
+                android:maxLength="10"
+                android:text=""
+                android:textColor="#424242"
+                android:textSize="16dp"
+                android:translationY="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.964"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/white_bg"
+            android:text="Edit"
+            android:textColor="@android:color/holo_blue_dark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardianMobileTIL" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/white_bg"
+            android:text="save"
+            android:textColor="@android:color/holo_green_dark"
+            app:layout_constraintTop_toBottomOf="@+id/guardianMobileTIL"
+            tools:layout_editor_absoluteX="269dp" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/emailTIL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:clipChildren="false"
+            android:hint="State"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LL1">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/transparent_bg"
+                android:enabled="false"
+                android:fontFamily="@font/productsans"
+                android:hint="Email"
+                android:inputType="text"
+                android:maxLength="20"
+                android:text=""
+                android:textColor="#424242"
+                android:textSize="16dp"
+                android:translationY="3dp"
+                tools:layout_editor_absoluteY="452dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/pgNameTIL"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/rollNoTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:clipChildren="false"
+                android:hint="PG Contact"
+                app:layout_constraintTop_toBottomOf="@+id/pgNameTIL"
+                tools:layout_editor_absoluteX="188dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/rollNoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/transparent_bg"
+                    android:enabled="false"
+                    android:fontFamily="@font/productsans"
+                    android:hint="Roll No."
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:text=""
+                    android:textColor="#424242"
+                    android:textSize="16dp"
+                    android:translationY="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.964"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/rankTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:clipChildren="false"
+                android:fontFamily="@font/productsans"
+                android:hint="PG Email"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/rankEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/transparent_bg"
+                    android:enabled="false"
+                    android:fontFamily="@font/productsans"
+                    android:hint="Rank"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:text=""
+                    android:textColor="#424242"
+                    android:textSize="16dp"
+                    android:translationY="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.964"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/personalDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/productsansbold"
+            android:text="Editable Details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registrationNumberTIL" />
+
+        <View
+            android:id="@+id/afterPersonalView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#e0e0e0"
+            app:layout_constraintTop_toBottomOf="@+id/personalDetailsTextView" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/white_bg"
+            android:text="Delete"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saveButton" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

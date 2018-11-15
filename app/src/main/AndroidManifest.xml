@@ -26,7 +26,9 @@
         <activity android:name=".PreferencesActivity" />
         <activity android:name=".ResultActivty" />
         <activity android:name=".SeatMaintenanceActivity" />
-        <activity android:name=".StudentDetailsActivity"></activity>
+        <activity android:name=".StudentDetailsActivity" />
+        <activity android:name=".FeePaymentActivity" />
+        <activity android:name=".RegistrationFormActivity"></activity>
     </application>
 
 </manifest>

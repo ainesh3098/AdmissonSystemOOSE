@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class HomePageActivity extends AppCompatActivity {
 
 
-    CardView result, preferences, feePayment, logout, personalDetails;
+    CardView result, preferences, feePayment, logout, personalDetails, formCard;
 
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
@@ -40,6 +40,7 @@ public class HomePageActivity extends AppCompatActivity {
         feePayment = findViewById(R.id.feePaymentCard);
         logout = findViewById(R.id.logoutCard);
         personalDetails = findViewById(R.id.personalDetailsCardView);
+        formCard= findViewById(R.id.docCard);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
@@ -99,7 +100,7 @@ public class HomePageActivity extends AppCompatActivity {
         feePayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(HomePageActivity.this , .class));
+                startActivity(new Intent(HomePageActivity.this , FeePaymentActivity.class));
                 finish();
             }
         });
@@ -108,8 +109,21 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                firebaseAuth.signOut();
+                startActivity(new Intent(HomePageActivity.this , LoginActivity.class));
+                finish();
             }
         });
+
+        formCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(HomePageActivity.this , RegistrationFormActivity.class));
+                finish();
+            }
+        });
+
 
 
 

@@ -223,11 +223,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
+            android:layout_marginEnd="80dp"
             android:background="@drawable/white_bg"
             android:text="save"
             android:textColor="@android:color/holo_green_dark"
-            app:layout_constraintTop_toBottomOf="@+id/guardianMobileTIL"
-            tools:layout_editor_absoluteX="269dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardianMobileTIL" />
 
 
         <android.support.design.widget.TextInputLayout

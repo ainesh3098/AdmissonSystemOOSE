@@ -1,6 +1,7 @@
 package oose.com.admissonsystem;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.Snackbar;
@@ -105,5 +106,11 @@ public class FeePaymentActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(FeePaymentActivity.this, HomePageActivity.class));
+        finish();
     }
 }

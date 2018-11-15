@@ -161,6 +161,18 @@ public class StudentDetailsActivity extends AppCompatActivity {
                 databaseReference.child("Candidate").child(firebaseUser.getUid()).child("guardianMobile").setValue(guardianMobileString);
 
 
+                addressTIL.setHintAnimationEnabled(false);
+                addressTIL.setEnabled(false);
+                addressTIL.setFocusable(false);
+
+                guardianMobileTIL.setHintAnimationEnabled(false);
+                guardianMobileTIL.setEnabled(false);
+                guardianMobileTIL.setFocusable(false);
+
+                guardianTIL.setHintAnimationEnabled(false);
+                guardianTIL.setEnabled(false);
+                guardianTIL.setFocusable(false);
+
 
 
 
@@ -189,9 +201,8 @@ public class StudentDetailsActivity extends AppCompatActivity {
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nameTIL.setHintAnimationEnabled(true);
+               /* nameTIL.setHintAnimationEnabled(true);
                 nameTIL.setEnabled(true);
-
 
                 rollNoTIL.setHintAnimationEnabled(true);
                 rollNoTIL.setEnabled(true);
@@ -203,16 +214,19 @@ public class StudentDetailsActivity extends AppCompatActivity {
                 emailTIL.setEnabled(true);
 
                 regNoTIL.setHintAnimationEnabled(true);
-                regNoTIL.setEnabled(true);
+                regNoTIL.setEnabled(true);*/
 
                 addressTIL.setHintAnimationEnabled(true);
                 addressTIL.setEnabled(true);
+                addressTIL.setFocusable(true);
 
                 guardianMobileTIL.setHintAnimationEnabled(true);
                 guardianMobileTIL.setEnabled(true);
+                guardianMobileTIL.setFocusable(true);
 
                 guardianTIL.setHintAnimationEnabled(true);
                 guardianTIL.setEnabled(true);
+                guardianTIL.setFocusable(true);
             }
         });
 

@@ -24,11 +24,13 @@ public class PreferencesActivity extends AppCompatActivity {
     TextView sub1 , sub2 , sub3 , sub4 , sub5;
     TextView preference1, preference2 , preference3;
 
-    FirebaseAuth firebaseAuth;
-    FirebaseUser firebaseUser;
-    FirebaseDatabase firebaseDatabase;
-    DatabaseReference databaseReference;
-    DatabaseReference databaseReference2;
+        FirebaseAuth firebaseAuth;
+        FirebaseUser firebaseUser;
+        FirebaseDatabase firebaseDatabase;
+        DatabaseReference databaseReference;
+        DatabaseReference databaseReference2;
+
+        int counter = 0;
 
     FloatingActionButton savePreferencesFAB;
 
@@ -93,6 +95,8 @@ public class PreferencesActivity extends AppCompatActivity {
         savePreferencesFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                
 
                 if (preference1.getText().toString().length() != 0) {
 

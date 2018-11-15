@@ -26,7 +26,6 @@ public class ResultActivty extends AppCompatActivity {
 
     long rank;
     long count;
-
     String course;
 
     @Override
@@ -49,12 +48,19 @@ public class ResultActivty extends AppCompatActivity {
 
         databaseReference = firebaseDatabase.getReference();
 
+
+
         databaseReference.child("Candidate").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 count = dataSnapshot.getChildrenCount();
                 rank = Long.parseLong(dataSnapshot.child(firebaseUser.getUid()).child("rank").getValue(String.class));
+//                int computerrank=1000;
+//                int informationrank=2000;
+//                int softwarerank=3000;
+//                int electricrank=4000;
+//                int mechanicrank=5000;
 
                 if (count < 6) {
 
@@ -81,6 +87,8 @@ public class ResultActivty extends AppCompatActivity {
                     courseName.setVisibility(View.GONE);
 
                 }
+
+                courseName.setText(course);
 
             }
 

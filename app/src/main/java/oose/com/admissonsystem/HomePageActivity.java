@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class HomePageActivity extends AppCompatActivity {
 
 
-    CardView result, preferences, feePayment, logout;
+    CardView result, preferences, feePayment, logout, personalDetails;
 
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
@@ -39,6 +39,7 @@ public class HomePageActivity extends AppCompatActivity {
         preferences = findViewById(R.id.preferencesCardView);
         feePayment = findViewById(R.id.feePaymentCard);
         logout = findViewById(R.id.logoutCard);
+        personalDetails = findViewById(R.id.personalDetailsCardView);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
@@ -68,6 +69,14 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(HomePageActivity.this, "Unable to fetch!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        personalDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            startActivity(new Intent(HomePageActivity.this, StudentDetailsActivity.class));
+            finish();
             }
         });
 
